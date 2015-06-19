@@ -10,43 +10,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Posts</title>
+        <link rel="stylesheet" href="view.css">
+        <title><strong> Posts</strong></title>
     </head>
-    <body style ="text-align: center;">
+    <body style ="text-align: center; background-color: light-grey;">
         <h1>Posts</h1>
 
         <%
 
-        /*    BufferedReader bufferedReader = new BufferedReader(new FileReader((String) request.getAttribute("path")));
+            /*    BufferedReader bufferedReader = new BufferedReader(new FileReader((String) request.getAttribute("path")));
 
-           // out.println((String) request.getAttribute("path"));
-            StringBuffer stringBuffer = new StringBuffer();
-            String line = null;
+             // out.println((String) request.getAttribute("path"));
+             StringBuffer stringBuffer = new StringBuffer();
+             String line = null;
 
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line).append("\n");
-            }
+             while ((line = bufferedReader.readLine()) != null) {
+             stringBuffer.append(line).append("\n");
+             }
 
-            String fileContents = stringBuffer.toString();
-            //   System.out.println(stringBuffer);
+             String fileContents = stringBuffer.toString();
+             //   System.out.println(stringBuffer);
 
-       //     request.setAttribute("fileContents", fileContents);
-      //      request.getRequestDispatcher("viewPosts.jsp").forward(request, response);
+             //     request.setAttribute("fileContents", fileContents);
+             //      request.getRequestDispatcher("viewPosts.jsp").forward(request, response);
 
-            String delims = "[|~~]";
+             String delims = "[|~~]";
 
-            String[] postMessage = fileContents.split(delims);
+             String[] postMessage = fileContents.split(delims);
 
-            for (int i = 0; i < postMessage.length; i++) {
-                out.println(postMessage[i] + "<br/><br/>");
-            }*/
-            
+             for (int i = 0; i < postMessage.length; i++) {
+             out.println(postMessage[i] + "<br/><br/>");
+             }*/
             String fileContents = (String) request.getAttribute("fileContents");
 
             String delims = "[|~~]";
             String[] postMessage = fileContents.split(delims);
             for (int i = postMessage.length - 1; i >= 0; i--) {
+
                 out.println(postMessage[i] + "<br/><br/>");
             }
 
