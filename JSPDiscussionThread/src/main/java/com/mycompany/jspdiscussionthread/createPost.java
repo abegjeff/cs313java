@@ -44,7 +44,7 @@ public class createPost extends HttpServlet {
         //   String postText = (String) request.getParameter("postText");
       //  String path = getServletContext().getRealPath("/") + "myFile.txt";
         
-        String path = System.getenv("OPENSHIFT_DATA_DIR");
+        String path = System.getenv("OPENSHIFT_DATA_DIR") + "/" + "myFile.txt";
         if (request.getParameterMap().containsKey("postText")) {
             String username = (String) session.getAttribute("username");
 
