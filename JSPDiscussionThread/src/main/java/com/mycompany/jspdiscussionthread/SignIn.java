@@ -48,6 +48,8 @@ public class SignIn extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        
+        
         String username = request.getParameter("username");
 
         System.out.println(username);
@@ -97,6 +99,18 @@ public class SignIn extends HttpServlet {
          System.out.println(words[0]);
          System.out.println(words[1]);
          }*/
+        
+        
+        /*
+        String username = request.getParameter("username");
+
+        System.out.println(username);
+
+        HttpSession session = request.getSession();
+        session.setAttribute("username", username);
+     
+        response.sendRedirect("newPost.jsp");
+ */
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
